@@ -59,12 +59,12 @@ quantityDown.addEventListener('click', function(e){
     if (quantity > 0) {
         quantity--
     }
-    updateQuantity(`Quantity: ${quantity}`)
+    updateQuantity(`quantity: ${quantity}`)
 })
 
 // add event listener to INCREASE quantity. Same method as the one above
 quantityUp.addEventListener('click', function(){
     quantity++
-    updateQuantity(`Quantity: ${quantity}`)
+    updateQuantity(`quantity: ${quantity}`)
 })
 
