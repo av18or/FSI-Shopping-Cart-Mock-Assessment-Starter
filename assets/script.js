@@ -52,10 +52,12 @@ for (var i = 0; i < removeCartItemButton.length; i++) {
 
 
 
-// variables for quantity up and down buttons
+// selectors for quantity up/down and cart buttons
 const quantityDown = document.querySelector('#quantity-down');
 const quantityUp = document.querySelector('#quantity-up');
 const checkOut = document.querySelector('.btn-checkout')
+const returnToCart = document.querySelector('.btn-cart')
+
 
 // add event listener to DECREASE quantity when quantityDown const connected to
 // #quantity-down is clicked. But do not allow quantity to go below 0 with IF statement. 
@@ -73,11 +75,19 @@ quantityUp.addEventListener('click', function(e){
 })
 
 
+
+
+// event listeners for checkout and return to cart buttons
+
 checkOut.addEventListener('click', function (e){
     location.href = "checkout.html"
-    console.log('click')
+   
 })
 
 
+returnToCart.addEventListener('click', function (e){
+    location.href = "index.html"
+    console.log('click')
+})
 
 
