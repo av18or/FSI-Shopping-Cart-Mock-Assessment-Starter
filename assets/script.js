@@ -24,9 +24,7 @@ function updateQuantity(displayQuantity) {
 }
 
 
-// selectors for quantity up and down buttons
-const quantityDown = document.querySelector('#quantity-down');
-const quantityUp = document.querySelector('#quantity-up');
+
 
 
 // event listeners:
@@ -53,18 +51,33 @@ for (var i = 0; i < removeCartItemButton.length; i++) {
 
 
 
+
+// variables for quantity up and down buttons
+const quantityDown = document.querySelector('#quantity-down');
+const quantityUp = document.querySelector('#quantity-up');
+const checkOut = document.querySelector('.btn-checkout')
+
 // add event listener to DECREASE quantity when quantityDown const connected to
 // #quantity-down is clicked. But do not allow quantity to go below 0 with IF statement. 
 quantityDown.addEventListener('click', function(e){
     if (quantity > 0) {
         quantity--
     }
-    updateQuantity(`quantity: ${quantity}`)
+    updateQuantity(`Quantity: ${quantity}`)
 })
 
 // add event listener to INCREASE quantity. Same method as the one above
-quantityUp.addEventListener('click', function(){
+quantityUp.addEventListener('click', function(e){
     quantity++
-    updateQuantity(`quantity: ${quantity}`)
+    updateQuantity(`Quantity: ${quantity}`)
 })
+
+
+checkOut.addEventListener('click', function (e){
+    location.href = "checkout.html"
+    console.log('click')
+})
+
+
+
 
